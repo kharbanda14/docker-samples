@@ -1,0 +1,26 @@
+version: "3.0"
+
+services:
+  web:
+    image: php:7.3-apache
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ./app:/var/www/html
+      - ./data/logs/apache:/var/log/apache2
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes: 
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+  redis:
+    image: redis
+    restart: always
