@@ -5,4 +5,4 @@ Here are few docker samples that i have created.
 
 1. [Lamp Server](lampp/)
 2. [Wordpress](wordpress/)
-3. [Lemp Server](lemp/)
+3. [Lemp Server](lempp/)
